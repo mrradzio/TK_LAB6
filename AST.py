@@ -6,7 +6,7 @@ class Node:
     def __str__(self):
         return  self.printTree(0)
 
-    
+
     def accept(self, visitor):
         className = self.__class__.__name__
         # return visitor.visit_<className>(self)
@@ -41,7 +41,8 @@ class Inits(Node):
 
 
 class Init(Node):
-    def __init__(self, id, expression):
+    def __init__(self,lineno, id, expression):
+        self.lineno = lineno
         self.id = id
         self.expression = expression
 

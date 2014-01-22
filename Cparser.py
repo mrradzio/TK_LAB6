@@ -74,7 +74,7 @@ class Cparser(object):
 
     def p_init(self, p):
         """init : ID '=' expression """
-        p[0] = AST.Init(p[1],p[3])
+        p[0] = AST.Init(p.lineno(1),p[1],p[3])
 
 
     def p_instructions(self, p):
