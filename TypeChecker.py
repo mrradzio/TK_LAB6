@@ -86,7 +86,7 @@ class TypeChecker(object):
     def visit_Init(self, node, type):
         # add declaration name = node.id, symbol = type
         if node.Variables.put(node.id, type)==-1:
-            self.errors.append("Variable "+ node.id + " already initialized")
+            self.errors.append("In line "+ str(node.lineno) + ": Variable "+ node.id + " already initialized")
             
     def visit_Instructions(self, node):
         if node.instructions != None:
