@@ -9,16 +9,10 @@ class TypeChecker(object):
     
     
     def __init__(self):
-        self.ttype = {'+': {'string': {'string': 'string'},
-                            'int': {'float': 'float', 'int': 'int'},
-                            'float': {'int': 'float', 'float': 'float'}},
-                      '-': {'int': {'int': 'int','float': 'float'},
-                            'float': {'int': 'float', 'float': 'float'}},
-                      '*': {'string': {'int': 'string'},
-                            'int': {'int': 'int', 'float': 'float', 'string': 'string'},
-                            'float': {'int:':'float' , 'float':'float'}},
-                      '/': {'int': {'int': 'float', 'float': 'float'},
-                            'float': {'float': 'float'} },
+        self.ttype = {'+': {'string': {'string': 'string'}, 'int': {'float': 'float', 'int': 'int'}, 'float': {'int': 'float', 'float': 'float'}},
+                      '-': {'int': {'int': 'int','float': 'float'}, 'float': {'int': 'float', 'float': 'float'}},
+                      '*': {'string': {'int': 'string'}, 'int': {'int': 'int', 'float': 'float', 'string': 'string'}, 'float': {'int:':'float' , 'float':'float'}},
+                      '/': {'int': {'int': 'float', 'float': 'float'}, 'float': {'float': 'float'} },
                       '!=': {'string': {'string': 'string'}, 'int': {'float': 'int', 'int': 'int'}, 'float': {'int': 'int', 'float': 'int'}},
                       '<': {'string': {'string': 'string'}, 'int': {'float': 'int', 'int': 'int'}, 'float': {'int': 'int', 'float': 'int'}},
                       '<=': {'string': {'string': 'string'}, 'int': {'float': 'int', 'int': 'int'}, 'float': {'int': 'int', 'float': 'int'}},

@@ -7,7 +7,7 @@ int gcd(int m, int n) {
 int res = 0;
 if (m!=n) { 
     if (m > n) 
-        res = gcd(m-n, n);
+        res = gcd(m-n/3, n);
     else
         res = gcd(n-m, m);
 }
@@ -39,6 +39,7 @@ while(a >= b ) {
     z = 4 * 3.4;
     f = 1/2*(a+b/a);
     d = 1/2*(a+b/a);
+
 }
 
 repeat
