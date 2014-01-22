@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c2a42d0-cc8e-40c7-be01-56e04a0d5fd0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cparser.py" afterPath="$PROJECT_DIR$/Cparser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TypeChecker.py" afterPath="$PROJECT_DIR$/TypeChecker.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.txt" afterPath="$PROJECT_DIR$/example.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TK_LAB6.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -15,7 +18,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/TK_LAB6$Cparser.coverage" NAME="Cparser Coverage Results" MODIFIED="1390384141198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/TK_LAB6$main.coverage" NAME="main Coverage Results" MODIFIED="1390393042189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TK_LAB6$main.coverage" NAME="main Coverage Results" MODIFIED="1390396285048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -29,10 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TreePrinter.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TreePrinter.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TreePrinter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="198" column="21" selection-start="5968" selection-end="5968" vertical-scroll-proportion="2.8616714" vertical-offset="2373" max-vertical-offset="4607">
+            <state line="53" column="31" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.0" vertical-offset="786" max-vertical-offset="4607">
               <folding />
             </state>
           </provider>
@@ -41,7 +44,7 @@
       <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="442">
+            <state line="18" column="0" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="391">
               <folding />
             </state>
           </provider>
@@ -50,7 +53,7 @@
       <file leaf-file-name="scanner.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scanner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="32" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1887">
+            <state line="78" column="32" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.0" vertical-offset="622" max-vertical-offset="1887">
               <folding />
             </state>
           </provider>
@@ -59,25 +62,25 @@
       <file leaf-file-name="Cparser.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Cparser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="193" column="44" selection-start="5917" selection-end="5917" vertical-scroll-proportion="0.0" vertical-offset="3060" max-vertical-offset="4522">
+            <state line="122" column="23" selection-start="3443" selection-end="3443" vertical-scroll-proportion="55.08" vertical-offset="3417" max-vertical-offset="4522">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AST.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AST.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="38" selection-start="3385" selection-end="3385" vertical-scroll-proportion="0.0" vertical-offset="2312" max-vertical-offset="3587">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TypeChecker.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TypeChecker.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TypeChecker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="24" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.0" vertical-offset="61" max-vertical-offset="4998">
+            <state line="20" column="28" selection-start="837" selection-end="837" vertical-scroll-proportion="0.36956522" vertical-offset="204" max-vertical-offset="5338">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SymbolTable.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SymbolTable.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="42" selection-start="1592" selection-end="1592" vertical-scroll-proportion="0.0" vertical-offset="1173" max-vertical-offset="1530">
               <folding />
             </state>
           </provider>
@@ -86,12 +89,21 @@
       <file leaf-file-name="example.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="1" selection-start="424" selection-end="424" vertical-scroll-proportion="-5.76" vertical-offset="451" max-vertical-offset="867">
+            <state line="46" column="0" selection-start="550" selection-end="550" vertical-scroll-proportion="-8.8" vertical-offset="562" max-vertical-offset="884">
               <folding />
             </state>
           </provider>
           <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AST.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AST.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="154" column="20" selection-start="3867" selection-end="3881" vertical-scroll-proportion="0.0" vertical-offset="2443" max-vertical-offset="3587">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -114,10 +126,10 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/example.txt" />
         <option value="$PROJECT_DIR$/AST.py" />
         <option value="$PROJECT_DIR$/scanner.py" />
         <option value="$PROJECT_DIR$/TreePrinter.py" />
+        <option value="$PROJECT_DIR$/example.txt" />
         <option value="$PROJECT_DIR$/Cparser.py" />
         <option value="$PROJECT_DIR$/TypeChecker.py" />
       </list>
@@ -399,18 +411,18 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15567484" sideWeight="0.5720859" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4279141" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4279141" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.93711656" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -507,20 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AST.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="38" selection-start="3385" selection-end="3385" vertical-scroll-proportion="0.0" vertical-offset="2312" max-vertical-offset="3587">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cparser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="44" selection-start="5917" selection-end="5917" vertical-scroll-proportion="0.0" vertical-offset="3060" max-vertical-offset="4522">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scanner.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="78" column="32" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.0" vertical-offset="1149" max-vertical-offset="1887">
@@ -528,9 +526,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TreePrinter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="31" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="4607">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/example.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="1" selection-start="424" selection-end="424" vertical-scroll-proportion="-5.76" vertical-offset="451" max-vertical-offset="867">
+        <state line="46" column="0" selection-start="550" selection-end="550" vertical-scroll-proportion="-8.8" vertical-offset="562" max-vertical-offset="884">
           <folding />
         </state>
       </provider>
@@ -538,16 +543,30 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TypeChecker.py">
+    <entry file="file://$PROJECT_DIR$/Cparser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="24" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.0" vertical-offset="61" max-vertical-offset="4998">
+        <state line="122" column="23" selection-start="3443" selection-end="3443" vertical-scroll-proportion="55.08" vertical-offset="3417" max-vertical-offset="4522">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TreePrinter.py">
+    <entry file="file://$PROJECT_DIR$/SymbolTable.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="198" column="21" selection-start="5968" selection-end="5968" vertical-scroll-proportion="2.8616714" vertical-offset="2373" max-vertical-offset="4607">
+        <state line="58" column="42" selection-start="1592" selection-end="1592" vertical-scroll-proportion="0.0" vertical-offset="1173" max-vertical-offset="1530">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AST.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="154" column="20" selection-start="3867" selection-end="3881" vertical-scroll-proportion="0.0" vertical-offset="2443" max-vertical-offset="3587">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TypeChecker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="28" selection-start="837" selection-end="837" vertical-scroll-proportion="0.36956522" vertical-offset="204" max-vertical-offset="5338">
           <folding />
         </state>
       </provider>

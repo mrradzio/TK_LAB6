@@ -9,19 +9,34 @@ class TypeChecker(object):
     
     
     def __init__(self):
-        self.ttype = {'+': {'string': {'string': 'string'}, 'int': {'float': 'float', 'int': 'int'}, 'float': {'int': 'float', 'float': 'float'}},
-                      '-': {'int': {'int': 'int','float': 'float'}, 'float': {'int': 'float', 'float': 'float'}},
-                      '*': {'string': {'int': 'string'}, 'int': {'int': 'int', 'float': 'float', 'string': 'string'}},
-                      '/': {'int': {'int': 'float', 'float': 'float'}, 'float': {'float': 'float'} },
+        self.ttype = {'+': {'string': {'string': 'string'},
+                            'int': {'float': 'float', 'int': 'int'},
+                            'float': {'int': 'float', 'float': 'float'}},
+                      '-': {'int': {'int': 'int','float': 'float'},
+                            'float': {'int': 'float', 'float': 'float'}},
+                      '*': {'string': {'int': 'string'},
+                            'int': {'int': 'int', 'float': 'float', 'string': 'string'},
+                            'float': {'int:':'float' , 'float':'float'}},
+                      '/': {'int': {'int': 'float', 'float': 'float'},
+                            'float': {'float': 'float'} },
                       '!=': {'string': {'string': 'string'}, 'int': {'float': 'int', 'int': 'int'}, 'float': {'int': 'int', 'float': 'int'}},
                       '<': {'string': {'string': 'string'}, 'int': {'float': 'int', 'int': 'int'}, 'float': {'int': 'int', 'float': 'int'}},
                       '<=': {'string': {'string': 'string'}, 'int': {'float': 'int', 'int': 'int'}, 'float': {'int': 'int', 'float': 'int'}},
                       '>': {'string': {'string': 'string'}, 'int': {'float': 'int', 'int': 'int'}, 'float': {'int': 'int', 'float': 'int'}},
                       '>=': {'string': {'string': 'string'}, 'int': {'float': 'int', 'int': 'int'}, 'float': {'int': 'int', 'float': 'int'}},
                       '==': {'string': {'string': 'string'}, 'int': {'float': 'int', 'int': 'int'}, 'float': {'int': 'int', 'float': 'int'}},
+                      '%': {'int': {'int': 'int'}},
+                      '^': {'int': {'int': 'int', 'float' : 'float'}, 'float':{'int':'float' , 'float':'float'}},
+                      '&': {'int': {'int': 'int'}},
+                      'AND': {'int': {'int': 'int'}},
+                      'OR': {'int': {'int': 'int'}},
+                      'SHL': {'int': {'int': 'int'}},
+                      'SHR': {'int': {'int': 'int'}},
+                      'EQ': {'int': {'int': 'int'}},
+                      'NEQ': {'int': {'int': 'int'}},
+                      'LE': {'int': {'int': 'int'}},
+                      'GE': {'int': {'int': 'int'}},
                       }
-
-
 
     #def visit_BinExpr(self, node):
         #type1 = node.left.accept(self)
@@ -206,7 +221,12 @@ class TypeChecker(object):
             print str(type1) + node.typeexpr + str(type2)
             self.errors.append("In line "+ str(node.lineno) + ": Invalid expression")
             return 'int'
-        
+
+    def visit_ExprInBrackets(self,node):
+        node.expression.Functions = node.Functions
+        node.expression.Variables = node.Variables
+        return node.expression.accept(self)
+
     def visit_Const(self, node):
         return node.const_value[1]
     
