@@ -180,7 +180,7 @@ class TypeChecker(object):
         type1 = node.Functions.get(node.id)
         node.expr_list_or_empty.Functions = node.Functions
         node.expr_list_or_empty.Variables = node.Variables
-        type2 = node.expr_list_or_empty.accept(self)
+        type2 = node.expr_list_or_empty.accept(self)      
         if type1[0] != type2:
             self.errors.append("Function call arguments don't match the definition")
         return type1[1]
