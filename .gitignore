@@ -1,5 +1,8 @@
 *.py[cod]
-
+.idea/
+.idea
+parser.out
+parsertab.py
 # C extensions
 *.so
 
