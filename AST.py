@@ -107,7 +107,7 @@ class Repeat_instr(Node):
 
 
 class Return_instr(Node):
-    def __init__(self, expression):
+    def __init__(self,lineno, expression):
         self.lineno = lineno
         self.expression = expression
 
