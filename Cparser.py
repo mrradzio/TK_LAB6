@@ -193,7 +193,10 @@ class Cparser(object):
                       | ID '(' expr_list_or_empty ')'
                       | ID '(' error ')' """
         if len(p) == 2:
-            p[0] = AST.Expression(p.lineno(1), None,None,None,p[1])
+            if isinstance(p[1],str):
+                p[0] = AST.Expression(p.lineno(1), None,None,None,p[1])
+            else:
+                p[0] = AST.Expression(p[1].lineno, None,None,None,p[1])
         else:
             if p[1] == '(' and p[3] == ')':
                  p[0] = AST.ExprInBrackets(p.lineno(1), p[2])

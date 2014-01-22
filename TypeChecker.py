@@ -9,10 +9,17 @@ class TypeChecker(object):
     
     
     def __init__(self):
-        self.ttype = {'+': {'string': {'string': 'string'}, 'int': {'float': 'float', 'int': 'int'}}, 
-                      '-': {'int': {'int': 'int','float': 'float'}, 'float': {'int': 'float','float': 'float'}}, 
+        self.ttype = {'+': {'string': {'string': 'string'}, 'int': {'float': 'float', 'int': 'int'}, 'float': {'int': 'float', 'float': 'float'}},
+                      '-': {'int': {'int': 'int','float': 'float'}, 'float': {'int': 'float', 'float': 'float'}},
                       '*': {'string': {'int': 'string'}, 'int': {'int': 'int', 'float': 'float', 'string': 'string'}},
-                      '/': {'int': {'int': 'float', 'float': 'float'}, 'float': {'float': 'float'} }}
+                      '/': {'int': {'int': 'float', 'float': 'float'}, 'float': {'float': 'float'} },
+                      '!=': {'string': {'string': 'string'}, 'int': {'float': 'int', 'int': 'int'}, 'float': {'int': 'int', 'float': 'int'}},
+                      '<': {'string': {'string': 'string'}, 'int': {'float': 'int', 'int': 'int'}, 'float': {'int': 'int', 'float': 'int'}},
+                      '<=': {'string': {'string': 'string'}, 'int': {'float': 'int', 'int': 'int'}, 'float': {'int': 'int', 'float': 'int'}},
+                      '>': {'string': {'string': 'string'}, 'int': {'float': 'int', 'int': 'int'}, 'float': {'int': 'int', 'float': 'int'}},
+                      '>=': {'string': {'string': 'string'}, 'int': {'float': 'int', 'int': 'int'}, 'float': {'int': 'int', 'float': 'int'}},
+                      }
+
 
 
     #def visit_BinExpr(self, node):
@@ -195,7 +202,7 @@ class TypeChecker(object):
         if node.typeexpr in self.ttype.keys() and type1 in self.ttype[node.typeexpr].keys() and type2 in self.ttype[node.typeexpr][type1].keys():
             return  self.ttype[node.typeexpr][type1][type2]
         else:
-            #print str(type1) + node.typeexpr + str(type2)
+            print str(type1) + node.typeexpr + str(type2)
             self.errors.append("In line "+ str(node.lineno) + ": Invalid expression")
             return 'int'
         
