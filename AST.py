@@ -3,6 +3,10 @@
 
 class Node:
 
+    def __str__(self):
+        return  self.printTree(0)
+
+    
     def accept(self, visitor):
         className = self.__class__.__name__
         # return visitor.visit_<className>(self)
