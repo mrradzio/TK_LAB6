@@ -177,7 +177,14 @@ class TypeChecker(object):
         
     def visit_Expression(self, node):
         if node.id_or_const != None:
-            return node.id_or_const
+            if node.id_or_const.__class__.__name__ == "Const":
+                node.id_or_const.Functions = node.Functions
+                node.id_or_const.Variables = node.Variables
+                return node.id_or_const.accept(self)
+            if node.Variables.get(node.id_or_const)== -1:
+                self.errors.append( "Couldn't find the variable" +node.id_or_const+ " in a current scope")
+                return 'int'
+            return node.Variables.get(node.id_or_const)
         node.expression1.Functions = node.Functions
         node.expression1.Variables = node.Variables
         type1 = node.expression1.accept(self)
@@ -188,8 +195,11 @@ class TypeChecker(object):
         if node.typeexpr in self.ttype.keys() and type1 in self.ttype[node.typeexpr].keys() and type2 in self.ttype[node.typeexpr][type1].keys():
             return  self.ttype[node.typeexpr][type1][type2]
         else:
-            self.errors.append("Incorrect expression")
+            self.errors.append("Invalid expression")
             return 'int'
+        
+    def visit_Const(self, node):
+        pass
     
     def visit_Funcalls(self, node):
         type1 = node.Functions.get(node.id)
