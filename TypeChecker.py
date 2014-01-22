@@ -10,7 +10,9 @@ class TypeChecker(object):
     
     def __init__(self):
         self.ttype = {'+': {'string': {'string': 'string'}, 'int': {'float': 'float', 'int': 'int'}}, 
-                        '-': {'baz': 3, 'quux': 4}}
+                      '-': {'int': {'int': 'int','float': 'float'}, 'float': {'int': 'float','float': 'float'}}, 
+                      '*': {'string': {'int': 'string'}, 'int': {'int': 'int', 'float': 'float', 'string': 'string'}},
+                      '/': {'int': {'int': 'float', 'float': 'float'}, 'float': {'float': 'float'} }}
 
 
     #def visit_BinExpr(self, node):
@@ -174,7 +176,20 @@ class TypeChecker(object):
         node.expression.accept(self)
         
     def visit_Expression(self, node):
-        return 'int'
+        if node.id_or_const != None:
+            return node.id_or_const
+        node.expression1.Functions = node.Functions
+        node.expression1.Variables = node.Variables
+        type1 = node.expression1.accept(self)
+        node.expression2.Functions = node.Functions
+        node.expression2.Variables = node.Variables
+        type2 = node.expression2.accept(self)
+        #print type1 + str(node.typeexpr) +type2
+        if node.typeexpr in self.ttype.keys() and type1 in self.ttype[node.typeexpr].keys() and type2 in self.ttype[node.typeexpr][type1].keys():
+            return  self.ttype[node.typeexpr][type1][type2]
+        else:
+            self.errors.append("Incorrect expression")
+            return 'int'
     
     def visit_Funcalls(self, node):
         type1 = node.Functions.get(node.id)
