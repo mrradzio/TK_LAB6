@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c2a42d0-cc8e-40c7-be01-56e04a0d5fd0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TypeChecker.py" afterPath="$PROJECT_DIR$/TypeChecker.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.txt" afterPath="$PROJECT_DIR$/example.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
     <ignored path="TK_LAB6.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -17,7 +15,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/TK_LAB6$Cparser.coverage" NAME="Cparser Coverage Results" MODIFIED="1390384141198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/TK_LAB6$main.coverage" NAME="main Coverage Results" MODIFIED="1390396493352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TK_LAB6$main.coverage" NAME="main Coverage Results" MODIFIED="1390398039239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -40,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="539" selection-end="539" vertical-scroll-proportion="0.8040346" vertical-offset="44" max-vertical-offset="425">
+            <state line="14" column="0" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="425">
               <folding />
             </state>
           </provider>
@@ -85,10 +83,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="example.txt" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="example.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/example.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="23" selection-start="147" selection-end="147" vertical-scroll-proportion="17.04" vertical-offset="579" max-vertical-offset="901">
+            <state line="8" column="12" selection-start="125" selection-end="125" vertical-scroll-proportion="0.42236024" vertical-offset="0" max-vertical-offset="918">
               <folding />
             </state>
           </provider>
@@ -129,8 +127,8 @@
         <option value="$PROJECT_DIR$/TreePrinter.py" />
         <option value="$PROJECT_DIR$/Cparser.py" />
         <option value="$PROJECT_DIR$/TypeChecker.py" />
-        <option value="$PROJECT_DIR$/example.txt" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/example.txt" />
       </list>
     </option>
   </component>
@@ -546,16 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="23" selection-start="147" selection-end="147" vertical-scroll-proportion="17.04" vertical-offset="579" max-vertical-offset="901">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TreePrinter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="31" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="4607">
@@ -565,9 +553,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="539" selection-end="539" vertical-scroll-proportion="0.8040346" vertical-offset="44" max-vertical-offset="425">
+        <state line="14" column="0" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="425">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="12" selection-start="125" selection-end="125" vertical-scroll-proportion="0.42236024" vertical-offset="0" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
   </component>
