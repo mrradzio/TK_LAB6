@@ -18,6 +18,7 @@ class TypeChecker(object):
                       '<=': {'string': {'string': 'string'}, 'int': {'float': 'int', 'int': 'int'}, 'float': {'int': 'int', 'float': 'int'}},
                       '>': {'string': {'string': 'string'}, 'int': {'float': 'int', 'int': 'int'}, 'float': {'int': 'int', 'float': 'int'}},
                       '>=': {'string': {'string': 'string'}, 'int': {'float': 'int', 'int': 'int'}, 'float': {'int': 'int', 'float': 'int'}},
+                      '==': {'string': {'string': 'string'}, 'int': {'float': 'int', 'int': 'int'}, 'float': {'int': 'int', 'float': 'int'}},
                       }
 
 
