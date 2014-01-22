@@ -188,7 +188,7 @@ class TypeChecker(object):
             node.fundefs.accept(self)
 
     def visit_Fundef(self, node):
-        node.Functions.putNewFun(node.id) #type returned?
+        node.Functions.putNewFun(node.id, node.type) 
         Functions = FunctionsTable(node.Functions, "Functions")
         Variables = SymbolTable(node.Variables, "Variables")
         node.arg_list.Functions = Functions
