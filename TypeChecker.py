@@ -118,11 +118,11 @@ class TypeChecker(object):
         type2 = node.expression.accept(self)
         type1 = node.Variables.get(node.id)
         if type1 == -1:
-            self.errors.append("Variable " + node.id +" was not declared")
+            self.errors.append("In line "+ str(node.lineno) + ": Variable " + node.id +" was not declared")
         elif type2 == -1:
-            self.errors.append("Incorrect expression")
+            self.errors.append("In line "+ str(node.lineno) + ": Incorrect expression")
         elif type1 != type2:
-            self.errors.append("Can't assign " + str(type2) + " to "+str(type1))
+            self.errors.append("In line "+ str(node.lineno) + ": Can't assign " + str(type2) + " to "+str(type1))
         
     def visit_Choice_instr(self, node):
         node.condition.Functions = node.Functions
@@ -182,7 +182,7 @@ class TypeChecker(object):
                 node.id_or_const.Variables = node.Variables
                 return node.id_or_const.accept(self)
             if node.Variables.get(node.id_or_const)== -1:
-                self.errors.append( "Couldn't find the variable" +node.id_or_const+ " in a current scope")
+                self.errors.append("In line "+ str(node.lineno) + ": Couldn't find the variable" +node.id_or_const+ " in a current scope")
                 return 'int'
             return node.Variables.get(node.id_or_const)
         node.expression1.Functions = node.Functions
@@ -195,11 +195,12 @@ class TypeChecker(object):
         if node.typeexpr in self.ttype.keys() and type1 in self.ttype[node.typeexpr].keys() and type2 in self.ttype[node.typeexpr][type1].keys():
             return  self.ttype[node.typeexpr][type1][type2]
         else:
-            self.errors.append("Invalid expression")
+            #print str(type1) + node.typeexpr + str(type2)
+            self.errors.append("In line "+ str(node.lineno) + ": Invalid expression")
             return 'int'
         
     def visit_Const(self, node):
-        pass
+        return node.const_value[1]
     
     def visit_Funcalls(self, node):
         type1 = node.Functions.get(node.id)
@@ -207,7 +208,7 @@ class TypeChecker(object):
         node.expr_list_or_empty.Variables = node.Variables
         type2 = node.expr_list_or_empty.accept(self)      
         if type1[0] != type2:
-            self.errors.append("Function call arguments don't match the definition")
+            self.errors.append("In line "+ str(node.lineno) + ": Function call arguments don't match the definition")
         return type1[1]
             
     def visit_ExprInBrackets(self, node):
@@ -255,7 +256,7 @@ class TypeChecker(object):
                 node.Functions.put(node.id, element[1])
                 #Functions.put(element[0], element[1]) # for recursion
                 if Variables.put(element[0], element[1])==-1:
-                    self.errors.append("Variable "+ element.name + " already initialized")
+                    self.errors.append("In line "+ str(node.lineno) + ": Variable "+ element.name + " already initialized")
         node.compound_instr.Functions = Functions
         node.compound_instr.Variables = Variables
         node.compound_instr.accept(self)

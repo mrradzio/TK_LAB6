@@ -137,7 +137,6 @@ class Const(Node):
         self.const_value = const_value
 
 
-
 class Expression(Node):
     def __init__(self,lineno, expression1, typeexpr, expression2, id_or_const = None):
         self.lineno = lineno
