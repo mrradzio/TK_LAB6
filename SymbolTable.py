@@ -18,22 +18,25 @@ class SymbolTable(object):
         if parent != None:
             self.parentScope = parent
         self.dictionary = {}
+        self.returnType = {}
     #
     #
 
-    def put(self, name, symbol):
+    def put(self, name, symbol, type):
     # jesli juz jest o takiej nazwie to zastap i return -1 -> error, juz jest ten symbol
         if name in self.dictionary.keys():
             self.dictionary[name] = symbol
+            self.returnType[name] = type
             return -1
         else:
             self.dictionary[name] = symbol
+            self.returnType[name] = type
             return 0
 
     def get(self, name):
     # jesli nie ma o takiej nazwie - getParentScope.get(name) - return -1 -> error, uzycie niezadeklarowanej zmiennej
         if name in self.dictionary.keys():
-            return self.dictionary[name]
+            return self.dictionary[name], self.returnType[name]
         elif self.parentScope != None:
             return self.getParentScope().get(name)
         else:
