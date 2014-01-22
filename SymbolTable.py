@@ -73,8 +73,7 @@ class FunctionsTable(object):
     def get(self, name):
         if self.parentScope != None:
             return self.getParentScope().get(name)
-        elif name in self.dictionary.keys():
-            return self.dictionary[name] , self.returnType[name]
+        elif name in self.dictionary.keys():return self.dictionary[name] , self.returnType[name]
         else:
             return -1 # nie znaleziono tej funkcji
             

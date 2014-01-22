@@ -175,6 +175,37 @@ class TypeChecker(object):
         
     def visit_Expression(self, node):
         return 'int'
+    
+    def visit_Funcalls(self, node):
+        type1 = node.Functions.get(node.id)
+        node.expr_list_or_empty.Functions = node.Functions
+        node.expr_list_or_empty.Variables = node.Variables
+        type2 = node.expr_list_or_empty.accept(self)
+        if type1[0] != type2:
+            self.errors.append("Function call arguments don't match the definition")
+        return type1[1]
+            
+    def visit_ExprInBrackets(self, node):
+        pass
+
+    def visit_Expr_list_or_empty(self, node):
+        node.expr_list.Functions = node.Functions
+        node.expr_list.Variables = node.Variables
+        if node.expr_list != None:
+            return node.expr_list.accept(self)
+        else:
+            return None
+        
+    def visit_Expr_list(self, node):
+        l1 = []
+        if node.expr_list != None:
+            node.expr_list.Functions = node.Functions
+            node.expr_list.Variables = node.Variables
+            l1.extend(node.expr_list.accept(self))
+        node.expression.Functions = node.Functions
+        node.expression.Variables = node.Variables
+        l1.append(node.expression.accept(self))
+        return l1
 
     def visit_Fundefs(self, node):
         if node.fundef != None:
@@ -196,7 +227,7 @@ class TypeChecker(object):
         listOfArguments = node.arg_list.accept(self)
         for element in listOfArguments:
             if element!= None:
-                node.Functions.put(element[0], element[1])
+                node.Functions.put(node.id, element[1])
                 #Functions.put(element[0], element[1]) # for recursion
                 if Variables.put(element[0], element[1])==-1:
                     self.errors.append("Variable "+ element.name + " already initialized")
