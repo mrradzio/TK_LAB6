@@ -16,26 +16,30 @@ class Node:
 
 
 class Program(Node):
-    def __init__(self, declarations, fundefs, instructions):
+    def __init__(self,lineno, declarations, fundefs, instructions):
+        self.lineno = lineno
         self.declarations = declarations
         self.fundefs = fundefs
         self.instructions = instructions
 
 
 class Declarations(Node):
-    def __init__(self, declarations = None , declaration = None ):
+    def __init__(self,lineno,  declarations = None , declaration = None ):
+        self.lineno = lineno
         self.declarations = declarations
         self.declaration = declaration
 
 
 class Declaration(Node):
-    def __init__(self, type, inits = None):
+    def __init__(self,lineno,  type, inits = None):
+        self.lineno = lineno
         self.type = type
         self.inits = inits
 
 
 class Inits(Node):
-    def __init__(self, init, inits = None):
+    def __init__(self,lineno,  init, inits = None):
+        self.lineno = lineno
         self.init = init
         self.inits = inits
 
@@ -48,54 +52,63 @@ class Init(Node):
 
 
 class Instructions(Node):
-    def __init__(self, instruction ,instructions = None):
+    def __init__(self,lineno,  instruction ,instructions = None):
+        self.lineno = lineno
         self.instructions = instructions
         self.instruction = instruction
 
 
 class Instruction(Node):
-    def __init__(self, instruction):
+    def __init__(self,lineno,  instruction):
+        self.lineno = lineno
         self.instruction = instruction
 
 
 class Print_instr(Node):
-    def __init__(self, expression):
+    def __init__(self,lineno, expression):
+        self.lineno = lineno
         self.expression = expression
 
 
 class Labeled_instr(Node):
-    def __init__(self, id, instruction):
+    def __init__(self,lineno, id, instruction):
+        self.lineno = lineno
         self.id = id
         self.instruction = instruction
 
 
 class Assignment(Node):
-    def __init__(self, id, expression):
+    def __init__(self,lineno, id, expression):
+        self.lineno = lineno
         self.id = id
         self.expression = expression
 
 
 class Choice_instr(Node):
-    def __init__(self, condition, instruction, elseinstruction = None):
+    def __init__(self,lineno, condition, instruction, elseinstruction = None):
+        self.lineno = lineno
         self.condition = condition
         self.instruction = instruction
         self.elseinstruction = elseinstruction
 
 
 class While_instr(Node):
-    def __init__(self, condition, instruction):
+    def __init__(self,lineno, condition, instruction):
+        self.lineno = lineno
         self.condition = condition
         self.instruction = instruction
 
 
 class Repeat_instr(Node):
-    def __init__(self, instructions, condition):
+    def __init__(self,lineno, instructions, condition):
+        self.lineno = lineno
         self.instructions = instructions
         self.condition = condition
 
 
 class Return_instr(Node):
     def __init__(self, expression):
+        self.lineno = lineno
         self.expression = expression
 
 
@@ -107,57 +120,67 @@ class Break_instr(Node):
 
 
 class Compound_instr(Node):
-    def __init__(self, declarations, instructions):
+    def __init__(self,lineno, declarations, instructions):
+        self.lineno = lineno
         self.declarations = declarations
         self.instructions = instructions
 
 
 class Condition(Node):
-    def __init__(self, expression):
+    def __init__(self,lineno, expression):
+        self.lineno = lineno
         self.expression = expression
 
 class Const(Node):
-    def __init__(self, const_value):
+    def __init__(self,lineno, const_value):
+        self.lineno = lineno
         self.const_value = const_value
 
 
 
 class Expression(Node):
-    def __init__(self, expression1, typeexpr, expression2, id_or_const = None):
+    def __init__(self,lineno, expression1, typeexpr, expression2, id_or_const = None):
+        self.lineno = lineno
         self.expression1 = expression1
         self.typeexpr = typeexpr
         self.expression2 = expression2
         self.id_or_const = id_or_const
 
 class Funcalls(Node):
-    def __init__(self, id, expr_list_or_empty):
+    def __init__(self,lineno, id, expr_list_or_empty):
+        self.lineno = lineno
         self.id = id
         self.expr_list_or_empty = expr_list_or_empty
 
 
 class ExprInBrackets(Node):
-    def __init__(self, expression):
+    def __init__(self,lineno, expression):
+        self.lineno = lineno
         self.expression = expression
 
 class Expr_list_or_empty(Node):
-    def __init__(self, expr_list = None):
+    def __init__(self,lineno, expr_list = None):
+        self.lineno = lineno
         self.expr_list = expr_list
 
 
 class Expr_list(Node):
-    def __init__(self, expression, expr_list=None):
+    def __init__(self,lineno, expression, expr_list=None):
+        self.lineno = lineno
         self.expr_list = expr_list
         self.expression = expression
 
 
 class Fundefs(Node):
-    def __init__(self, fundef = None, fundefs = None):
+    def __init__(self,lineno, fundef = None, fundefs = None):
+        self.lineno = lineno
         self.fundef = fundef
         self.fundefs = fundefs
 
 
 class Fundef(Node):
-    def __init__(self, type, id, args_list_or_empty, compound_instruction):
+    def __init__(self,lineno, type, id, args_list_or_empty, compound_instruction):
+        self.lineno = lineno
         self.type = type
         self.id = id
         self.arg_list = args_list_or_empty
@@ -165,16 +188,19 @@ class Fundef(Node):
 
 
 class Args_list_or_empty(Node):
-    def __init__(self, args_list = None):
+    def __init__(self,lineno, args_list = None):
+        self.lineno = lineno
         self.args_list = args_list
 
 class Args_list(Node):
-    def __init__(self, arg, args_list = None):
+    def __init__(self,lineno, arg, args_list = None):
+        self.lineno = lineno
         self.args_list = args_list
         self.arg = arg
 
 class Arg(Node):
-    def __init__(self, type, id):
+    def __init__(self,lineno, type, id):
+        self.lineno = lineno
         self.type = type
         self.id = id
 
