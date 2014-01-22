@@ -211,8 +211,6 @@ class TypeChecker(object):
             self.errors.append("In line "+ str(node.lineno) + ": Function call arguments don't match the definition")
         return type1[1]
             
-    def visit_ExprInBrackets(self, node):
-        pass
 
     def visit_Expr_list_or_empty(self, node):
         node.expr_list.Functions = node.Functions
