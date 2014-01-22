@@ -172,7 +172,7 @@ class TreePrinter:
     def printTree(self, indent):
         result = ""
         result += addIndent(indent)
-        result += self.const_value +"\n"
+        result += self.const_value[0] +"\n"
         return result
 
     @addToClass(AST.Expression)

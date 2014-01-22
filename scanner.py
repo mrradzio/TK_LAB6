@@ -71,14 +71,17 @@ class Scanner(object):
 
   def t_FLOAT(self,t):
       r"\d+(\.\d*)|\.\d+"
+      t.value = (t.value, "FLOAT")
       return t
 
   def t_INTEGER(self,t):
       r"\d+"
+      t.value = (t.value, "INTEGER")
       return t
 
   def t_STRING(self,t):
       r'\"([^\\\n]|(\\.))*?\"'
+      t.value = (t.value, "STRING")
       return t
 
   t_LE = r"<="
